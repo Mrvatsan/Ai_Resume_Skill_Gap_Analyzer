@@ -180,11 +180,21 @@ function trackEvent(eventName, eventData = {}) {
     // }
 }
 
-// Track CTA clicks
-document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', function() {
-        trackEvent('cta_clicked', {
-            cta_text: this.textContent.trim()
-        });
-    });
-});
+/**
+ * Service Worker registration for offline support (optional)
+ */
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(registration => console.log('SW registered'))
+            .catch(error => console.log('SW registration failed:', error));
+    }
+}
+
+// Register service worker on page load
+// Uncomment when service worker is ready
+// if (document.readyState === 'loading') {
+//     document.addEventListener('DOMContentLoaded', registerServiceWorker);
+// } else {
+//     registerServiceWorker();
+// }
