@@ -3,12 +3,22 @@
 // ============================================
 
 /**
+ * Configuration
+ */
+const CONFIG = {
+    appUrl: 'http://localhost:8501',
+    enableAnalytics: false,
+    enableTracking: true,
+    scrollBehavior: 'smooth'
+};
+
+/**
  * Launch the Streamlit application
  */
 function launchApp() {
     // Redirect to the Streamlit app
     // Update the URL below to match your deployment URL
-    window.location.href = 'http://localhost:8501'; // For local development
+    window.location.href = CONFIG.appUrl; // For local development
     
     // For production, use:
     // window.location.href = 'https://your-streamlit-deployment-url.com';
