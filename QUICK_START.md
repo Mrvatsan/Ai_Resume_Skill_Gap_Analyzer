@@ -40,6 +40,20 @@
 2. **Double-click `index.html`**
 3. Opens in default browser
 
+### Option 4: Docker (Production-Ready)
+
+1. **Build Docker image**
+   ```bash
+   docker build -t resume-ai-landing .
+   ```
+
+2. **Run container**
+   ```bash
+   docker run -p 8000:80 resume-ai-landing
+   ```
+
+3. **Access at** `http://localhost:8000`
+
 ---
 
 ## 🔗 Running Landing Page + Streamlit App Together
