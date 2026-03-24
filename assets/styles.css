@@ -740,4 +740,10 @@ body {
     .cta-content h2 {
         font-size: 1.5rem;
     }
+    
+    /* Touch-friendly target sizes */
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
 }
