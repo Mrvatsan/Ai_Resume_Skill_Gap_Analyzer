@@ -129,3 +129,20 @@ TODO = [
     "Multi-language support",
     "Mobile app link"
 ]
+
+## Testing Configuration
+TESTING = {
+    "unit_tests": True,
+    "integration_tests": True,
+    "e2e_tests": True,
+    "lighthouse_score_target": 90,
+    "accessibility_wcag": "AA"
+}
+
+## Security Configuration
+SECURITY = {
+    "enable_csp": True,
+    "enable_cors": False,
+    "ssl_required": True,
+    "secure_headers": True
+}
