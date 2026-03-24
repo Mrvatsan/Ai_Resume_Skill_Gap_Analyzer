@@ -114,6 +114,12 @@ project-root/
    
    # Option 2: Use Live Server (VS Code extension)
    # Right-click index.html → "Open with Live Server"
+   
+   # Option 3: Use Python web server
+   python -m http.server 8000
+   
+   # Option 4: Use Node.js http-server
+   npx http-server
    ```
 
 2. **Run both landing page and Streamlit app together:**
@@ -126,6 +132,12 @@ project-root/
    python -m http.server 8000
    
    # Option B: Use Live Server in VS Code
+   
+   # Option C: Node.js server
+   npx http-server
+   
+   # Option D: Using Docker
+   docker-compose up
    ```
 
    - Landing page: `http://localhost:8000`
