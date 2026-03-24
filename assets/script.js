@@ -156,6 +156,19 @@ function initializeEventListeners() {
 function trackEvent(eventName, eventData = {}) {
     console.log('Event tracked:', eventName, eventData);
     
+    // Store event in localStorage for analytics
+    try {
+        const events = JSON.parse(localStorage.getItem('landing_events') || '[]');
+        events.push({
+            name: eventName,
+            data: eventData,
+            timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('landing_events', JSON.stringify(events.slice(-100))); // Keep last 100 events
+    } catch (e) {
+        console.warn('Could not track event:', e);
+    }
+    
     // Example: Send to Google Analytics
     // if (typeof gtag !== 'undefined') {
     //     gtag('event', eventName, eventData);
