@@ -128,13 +128,18 @@ window.addEventListener('scroll', function() {
 });
 
 /**
- * Initialize on page load
+ * Initialize on page load with performance monitoring
  */
 document.addEventListener('DOMContentLoaded', function() {
+    const startTime = performance.now();
     console.log('Resume AI Landing Page Loaded');
     
     // Add any additional initialization code here
     initializeEventListeners();
+    
+    // Log performance metrics
+    const endTime = performance.now();
+    console.log(`Page initialization took ${(endTime - startTime).toFixed(2)}ms`);
 });
 
 /**
